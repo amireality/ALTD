@@ -100,22 +100,24 @@ Project: Altered
   h2 {
     font-size: 1.75rem;
   }
-    /* Header & Navigation */
+  /* Header & Navigation */
   .main-nav {
     position: fixed;
     top: var(--header-height);
     left: -100%;
     width: 80%;
     height: calc(100vh - var(--header-height));
-    background-color: var(--darker-bg);
+    background-color: rgba(15, 26, 42, 0.95);
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     z-index: 999;
     overflow-y: auto;
+    visibility: hidden;
   }
   
   .main-nav.active {
     left: 0;
+    visibility: visible;
   }
   
   .nav-menu {
