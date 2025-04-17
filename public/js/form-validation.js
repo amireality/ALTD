@@ -88,65 +88,67 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.disabled = true;
                 }
                 
-                // Simulate form submission (replace with actual AJAX in production)
-                setTimeout(() => {
+                // Determine which endpoint to use based on form class
+                let endpoint = '/api/contact'; // Default endpoint
+                
+                if (form.classList.contains('booking-form')) {
+                    endpoint = '/api/booking';
+                } else if (form.classList.contains('newsletter-form')) {
+                    endpoint = '/api/subscribe';
+                }
+                
+                // Actual form submission using AJAX
+                const formData = new FormData(form);
+                const formDataObject = {};
+                
+                // Convert FormData to JSON object
+                formData.forEach((value, key) => {
+                    formDataObject[key] = value;
+                });
+                
+                fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formDataObject)
+                })
+                .then(response => response.json())
+                .then(data => {
                     form.classList.remove('submitting');
-                    form.classList.add('success');
-                    
-                    // Show success message
-                    form.innerHTML = `
-                        <div class="form-success">
-                            <i class="fas fa-check-circle"></i>
-                            <h3>Thank you!</h3>
-                            <p>Your submission has been received successfully. We'll be in touch soon.</p>
-                        </div>
-                    `;
-                    
-                    // Scroll to success message
-                    window.scrollTo({
-                        top: form.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // In production, use this for real form submission:
-                    /*
-                    const formData = new FormData(form);
-                    fetch('/api/submit-form', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        form.classList.remove('submitting');
-                        if (data.success) {
-                            form.classList.add('success');
-                            form.innerHTML = `
-                                <div class="form-success">
-                                    <i class="fas fa-check-circle"></i>
-                                    <h3>Thank you!</h3>
-                                    <p>Your submission has been received successfully. We'll be in touch soon.</p>
-                                </div>
-                            `;
-                        } else {
-                            // Show error
-                            if (submitBtn) {
-                                submitBtn.innerHTML = originalBtnText;
-                                submitBtn.disabled = false;
-                            }
-                            showFormError(form, data.message || 'There was a problem submitting the form. Please try again.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Form submission error:', error);
-                        form.classList.remove('submitting');
+                    if (data.success) {
+                        form.classList.add('success');
+                        form.innerHTML = `
+                            <div class="form-success">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Thank you!</h3>
+                                <p>${data.message || 'Your submission has been received successfully. We\'ll be in touch soon.'}</p>
+                            </div>
+                        `;
+                        
+                        // Scroll to success message
+                        window.scrollTo({
+                            top: form.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Show error
                         if (submitBtn) {
                             submitBtn.innerHTML = originalBtnText;
                             submitBtn.disabled = false;
                         }
-                        showFormError(form, 'Network error. Please check your connection and try again.');
-                    });
-                    */
-                }, 1500);
+                        showFormError(form, data.message || 'There was a problem submitting the form. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    form.classList.remove('submitting');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                    showFormError(form, 'Network error. Please check your connection and try again.');
+                });
             } else {
                 // Scroll to the first error
                 const firstError = form.querySelector('.error');

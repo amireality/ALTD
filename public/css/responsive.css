@@ -100,8 +100,7 @@ Project: Altered
   h2 {
     font-size: 1.75rem;
   }
-  
-  /* Header & Navigation */
+    /* Header & Navigation */
   .main-nav {
     position: fixed;
     top: var(--header-height);
@@ -147,6 +146,33 @@ Project: Altered
   
   .mobile-menu-toggle {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .mobile-menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mobile-menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
   
   body.menu-open {
