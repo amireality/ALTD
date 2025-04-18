@@ -42,16 +42,16 @@ function initNavigation() {
     // Header scroll state
     const header = document.querySelector('.header');
     const scrollThreshold = 50;
-    
-    // Mobile menu toggle
+      // Mobile menu toggle
     const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.nav-menu');
+    const mainNav = document.querySelector('.main-nav');
     
-    if (menuToggle && mobileMenu) {
+    if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', function() {
             this.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+            mainNav.classList.toggle('active');
             document.body.classList.toggle('menu-open');
+            console.log('Mobile menu toggled');
         });
     }
       // Dropdown menus
