@@ -11,9 +11,12 @@
     <link rel="icon" href="logo.png" type="image/x-icon">
     
     <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/service-enhancements.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/about-enhancements.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,11 +64,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');">
         <div class="container">
             <div class="hero-content">
-                <h1>About Altered</h1>
-                <p>Learn about our journey and commitment to excellence in customer service</p>
+                <h1 class="typing-animation">About Altered</h1>
+                <p class="fade-in">Learn about our journey and commitment to excellence in customer service</p>
             </div>
         </div>
     </section>
@@ -86,27 +89,40 @@
     <section class="section about-main">
         <div class="container">
             <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-users"></i>
-                        <span>Team Image</span>
-                    </div>
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80" alt="Altered Team at Work" style="width:100%;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
                 </div>
                 <div class="about-text">
-                    <h6>Our Story</h6>
-                    <h2>Who We Are</h2>
-                    <p>Altered is a Remote Assistant or Customer Service Representative company established in 2018. We assist companies in managing their work in a process-oriented and cost-effective way and measure everything with reports and analytics.</p>
-                    <p>We help companies with traditional pain points, including operations and execution. While working behind the desk, we help clients save on operational costs by up to 70% and reduce the time spent on operational tasks by 60%, allowing them to focus on what they do best – their core business.</p>
+                    <div class="about-header slide-in-left">
+                        <h6>Our Story</h6>
+                        <h2>Who We Are</h2>
+                    </div>
+                    <div class="about-cards">
+                        <div class="about-card fade-in">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Our Journey</h4>
+                            <p>Altered is a Remote Assistant or Customer Service Representative company established in 2018. We assist companies in managing their work in a process-oriented and cost-effective way and measure everything with reports and analytics.</p>
+                        </div>
+                        <div class="about-card fade-in">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Our Impact</h4>
+                            <p>We help companies with traditional pain points, including operations and execution. While working behind the desk, we help clients save on operational costs by up to 70% and reduce the time spent on operational tasks by 60%, allowing them to focus on what they do best – their core business.</p>
+                        </div>
+                    </div>
                     <div class="about-stats">
-                        <div class="stat-item">
+                        <div class="stat-item scale-up">
                             <div class="stat-number">2018</div>
                             <div class="stat-text">Year Founded</div>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item scale-up">
                             <div class="stat-number">50+</div>
                             <div class="stat-text">Happy Clients</div>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item scale-up">
                             <div class="stat-number">98%</div>
                             <div class="stat-text">Client Retention</div>
                         </div>
@@ -120,21 +136,21 @@
     <section class="section mission-vision">
         <div class="container">
             <div class="mission-vision-grid">
-                <div class="mission-card">
+                <div class="mission-card slide-in-left">
                     <div class="icon-box">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Our Mission</h3>
                     <p>To provide excellent customer service and virtual assistance solutions that enable our clients to focus on their core business activities while we handle the operational tasks with precision and dedication.</p>
                 </div>
-                <div class="vision-card">
+                <div class="vision-card fade-in">
                     <div class="icon-box">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>Our Vision</h3>
                     <p>To become the leading provider of remote assistant services globally, known for our quality, reliability, and the measurable impact we make on our clients' business growth and success.</p>
                 </div>
-                <div class="values-card">
+                <div class="values-card slide-in-right">
                     <div class="icon-box">
                         <i class="fas fa-heart"></i>
                     </div>
@@ -156,9 +172,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Amir - CEO & Founder" style="width:100%;height:200px;object-fit:cover;border-radius:12px;">
                     </div>
                     <div class="member-info">
                         <h4>Amir</h4>
@@ -171,9 +185,7 @@
                 </div>
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Chaman Sharma - Operations Manager" style="width:100%;height:200px;object-fit:cover;border-radius:12px;">
                     </div>
                     <div class="member-info">
                         <h4>Chaman Sharma</h4>
@@ -186,9 +198,7 @@
                 </div>
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Pranay Mishra - Customer Service Lead" style="width:100%;height:200px;object-fit:cover;border-radius:12px;">
                     </div>
                     <div class="member-info">
                         <h4>Pranay Mishra</h4>
@@ -201,9 +211,7 @@
                 </div>
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="Amit Meena - Technical Support" style="width:100%;height:200px;object-fit:cover;border-radius:12px;">
                     </div>
                     <div class="member-info">
                         <h4>Amit Meena</h4>
@@ -357,5 +365,7 @@
     <!-- JavaScript Files -->
     <script src="js/main.js"></script>
     <script src="js/service-enhancements.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/mobile-menu-test.js"></script>
 </body>
 </html>

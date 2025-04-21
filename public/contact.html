@@ -11,9 +11,13 @@
     <link rel="icon" href="logo.png" type="image/x-icon">
     
     <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/service-enhancements.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/contact-enhancements.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +27,7 @@
     
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/3fe79eff89.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -61,12 +66,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Contact Altered</h1>
-                <p>We're here to help you transform your business operations</p>
-            </div>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="typing-animation">Contact Us</h1>
+            <p class="fade-in">Get in touch with our team for any inquiries or support</p>
         </div>
     </section>
 
@@ -83,49 +86,43 @@
     </section>
 
     <!-- Contact Information Section -->
-    <section class="section contact-info-section">
-        <div class="container">
-            <div class="section-header">
-                <h6>Get In Touch</h6>
-                <h2>Contact Altered</h2>
-                <p>We're here to help transform your business operations. Reach out to discuss how we can support your growth.</p>
+    <section class="contact-info-section">
+        <div class="contact-info-grid">
+            <div class="contact-info-card slide-in-left">
+                <div class="icon-box">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h4>Phone</h4>
+                <p>Call us at</p>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
             </div>
-            <div class="contact-info-grid">
-                <div class="contact-info-card">
-                    <div class="icon-box">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h4>Call Us</h4>
-                    <p>Speak directly with our team</p>
-                    <a href="tel:+91837794527">+91 83779 4527</a>
+            <div class="contact-info-card fade-in">
+                <div class="icon-box">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <div class="contact-info-card">
-                    <div class="icon-box">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h4>Email Us</h4>
-                    <p>Send us your inquiries</p>
-                    <a href="mailto:info@altered.co.in">info@altered.co.in</a>
-                </div>
-                <div class="contact-info-card">
-                    <div class="icon-box">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h4>Office Location</h4>
-                    <p>Jaipur</p>
-                    <p>India</p>
-                </div>
-                <div class="contact-info-card">
-                    <div class="icon-box">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h4>Live Chat</h4>
-                    <p>
-                        <a href="#" class="chat-link">Start a live chat</a>
-                    </p>
-                    <p>Available during business hours</p>
-                </div>
+                <h4>Email</h4>
+                <p>Email us at</p>
+                <a href="mailto:info@altered.com">info@altered.com</a>
             </div>
+            <div class="contact-info-card slide-in-right">
+                <div class="icon-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h4>Office Location</h4>
+                <p>Visit us at</p>
+                <a href="#map">123 Business Street, City</a>
+            </div>
+            <div class="contact-info-card scale-up">
+                <div class="icon-box">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h4>Live Chat</h4>
+                <p>Chat with us</p>
+                <a href="#chat">Start a conversation</a>
+            </div>
+        </div>
+        <div class="office-image fade-in">
+            <img src="images/office.jpg" alt="Our Office">
         </div>
     </section>
 
@@ -375,5 +372,7 @@
     <script src="js/main.js"></script>
     <script src="js/form-validation.js"></script>
     <script src="js/service-enhancements.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/mobile-menu-test.js"></script>
 </body>
 </html>

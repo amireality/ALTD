@@ -41,17 +41,25 @@ document.addEventListener('DOMContentLoaded', function() {
 function initNavigation() {
     // Header scroll state
     const header = document.querySelector('.header');
-    const scrollThreshold = 50;
-      // Mobile menu toggle
+    const scrollThreshold = 50;    // Mobile menu toggle
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     
     if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             this.classList.toggle('active');
             mainNav.classList.toggle('active');
             document.body.classList.toggle('menu-open');
-            console.log('Mobile menu toggled');
+        });
+        // Close menu when clicking outside (overlay)
+        document.addEventListener('click', function(e) {
+            if (document.body.classList.contains('menu-open') && !mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
         });
     }
       // Dropdown menus
@@ -563,7 +571,9 @@ function initMobileMenu() {
     const dropdownItems = document.querySelectorAll('.has-dropdown');
     
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');

@@ -1,0 +1,21 @@
+:root {
+    /* ALTERED BRAND COLOR PALETTE (DARK THEME) */
+    --blue: rgba(15, 26, 42, 0.9);      /* Mediterranean Blue (Header, Hero, Buttons) */
+    --yellow: #FFD400;                  /* Sunshine Yellow (Logo, Buttons, Highlights) */
+    --orange: #FF6B35;                  /* Tangerine Orange (Headings, CTA Text) */
+    --gray: #CBD5E1;                    /* Slate Gray (Default Text) */
+    --white: #E2E8F0;                   /* Frost White (Light Text & UI) */
+    --black: #0F172A;                   /* Night Black (Page Background) */
+    --light-blue: #1E293B;              /* Deep Blue Slate (Card Backgrounds, Blocks) */
+    
+    /* Additional Variables */
+    --primary-color: var(--yellow);     /* Primary brand color */
+    --secondary-color: var(--orange);   /* Secondary brand color */
+    --dark-color: var(--black);         /* Dark color for text */
+    --text-color: var(--gray);          /* Default text color */
+    --light-color: var(--white);        /* Light color for text */
+    --background-color: var(--black);   /* Page background */
+    --card-background: var(--light-blue); /* Card background */
+    --border-color: rgba(255, 255, 255, 0.1); /* Default border */
+    --border-hover: var(--yellow);      /* Border hover highlight */
+} 

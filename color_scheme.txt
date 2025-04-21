@@ -1,0 +1,49 @@
+==========================================
+🎨 ALTERED BRAND COLOR PALETTE (DARK THEME)
+==========================================
+
+Primary Theme Color:
+---------------------
+--blue: rgba(15, 26, 42, 0.9);      // Mediterranean Blue (Header, Hero, Buttons)
+
+Accent Colors:
+---------------
+--yellow: #FFD400;                  // Sunshine Yellow (Logo, Buttons, Highlights)
+--orange: #FF6B35;                  // Tangerine Orange (Headings, CTA Text)
+
+Neutral Colors:
+----------------
+--gray: #CBD5E1;                    // Slate Gray (Default Text)
+--white: #E2E8F0;                   // Frost White (Light Text & UI)
+--black: #0F172A;                   // Night Black (Page Background)
+--light-blue: #1E293B;             // Deep Blue Slate (Card Backgrounds, Blocks)
+
+==========================================
+🧭 COLOR USAGE GUIDE
+==========================================
+
+- Primary Background        : var(--black)
+- Section Backgrounds       : var(--blue), var(--light-blue)
+- Default Text Color        : var(--gray)
+- Headings / Highlights     : var(--orange)
+- CTA / Action Buttons      : Background - var(--yellow), Text - var(--black)
+- Logo                      : var(--yellow)
+- Links                     : var(--white); Hover - var(--orange)
+- Card Background           : var(--light-blue)
+- Card Heading Text         : var(--white)
+- Border (default)          : rgba(255, 255, 255, 0.1)
+- Border (hover highlight)  : var(--yellow)
+
+==========================================
+
+
+/*
+   === ALTERED BRAND COLOR PALETTE (DARK THEME) ===
+   --blue: rgba(15, 26, 42, 0.9);  // Mediterranean Blue
+   --yellow: #FFD400;              // Sunshine Yellow
+   --orange: #FF6B35;              // Tangerine Orange
+   --gray: #CBD5E1;                // Slate Gray
+   --white: #E2E8F0;               // Frost White
+   --black: #0F172A;               // Night Black
+   --light-blue: #1E293B;          // Deep Blue Slate
+*/

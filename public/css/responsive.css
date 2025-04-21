@@ -41,48 +41,80 @@ Project: Altered
   }
   
   /* Header & Navigation */
-  .company-name {
-    font-size: 1.75rem;
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  .header.scrolled .company-name {
-    font-size: 1.25rem;
+  .mobile-menu-toggle {
+    display: flex;
+    order: 2;
+    margin-left: 1rem;
+    margin-right: 0;
+    right: 0;
+    left: auto;
+    position: relative;
+    z-index: 2001;
+  }
+  
+  .logo {
+    order: 1;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    left: auto;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: rgba(15, 26, 42, 0.98);
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    z-index: 2000;
+    transition: right 0.3s cubic-bezier(.77,0,.18,1);
+    display: block;
+    padding-top: var(--header-height);
+  }
+  
+  .main-nav.active {
+    right: 0;
+  }
+  
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1500;
+    pointer-events: all;
   }
   
   .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
     gap: 1.5rem;
   }
   
-  /* Hero Section */
-  .hero {
-    min-height: 500px;
+  .dropdown {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    background: rgba(0,0,0,0.2);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
   }
   
-  /* Services Section */
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  /* Testimonials */
-  .testimonial-card {
-    min-width: 300px;
-    max-width: 300px;
-  }
-  
-  /* Services Showcase */
-  .services-showcase {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .service-item:last-child {
-    grid-column: span 2;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  /* Footer */
-  .footer-main {
-    grid-template-columns: 1fr 1.5fr;
+  .has-dropdown.active .dropdown {
+    display: block;
   }
 }
 
@@ -90,6 +122,7 @@ Project: Altered
 @media screen and (max-width: 768px) {
   :root {
     --container-width: 720px;
+    --header-height: 60px;
     --section-spacing: 60px;
   }
   
@@ -100,46 +133,24 @@ Project: Altered
   h2 {
     font-size: 1.75rem;
   }
-  /* Header & Navigation */
+  
   .main-nav {
-    position: fixed;
-    top: var(--header-height);
-    left: -100%;
-    width: 80%;
-    height: calc(100vh - var(--header-height));
-    background-color: rgba(15, 26, 42, 0.95);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    z-index: 999;
-    overflow-y: auto;
-    visibility: hidden;
+    width: 85vw;
+    max-width: 300px;
   }
   
   .main-nav.active {
-    left: 0;
-    visibility: visible;
+    right: 0;
   }
   
   .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem;
-    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    gap: 1.25rem;
   }
   
   .dropdown {
-    position: static;
-    width: 100%;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    background-color: rgba(16, 38, 73, 0.5);
-    padding: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.5rem 0;
     margin-top: 0.5rem;
-    display: none;
-    border-radius: 4px;
   }
   
   .has-dropdown.active .dropdown {
@@ -153,7 +164,7 @@ Project: Altered
     width: 30px;
     height: 22px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 2001;
   }
   
   .mobile-menu-toggle .bar {

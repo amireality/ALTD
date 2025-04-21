@@ -98,14 +98,28 @@
 @media screen and (max-width: 768px) {
     .hero {
         min-height: 450px;
+        padding: 40px 0;
+    }
+    
+    .hero-content {
+        padding: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 12px;
+        backdrop-filter: blur(5px);
     }
     
     .hero-content h1 {
         font-size: 2rem;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
     }
     
     .hero-content p {
         font-size: 1rem;
+        line-height: 1.5;
     }
     
     /* Fix for right margin on mobile */

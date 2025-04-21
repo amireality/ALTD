@@ -9,11 +9,12 @@
     
     <!-- Favicon -->
     <link rel="icon" href="public/logo.png" type="image/x-icon">
-    
-    <!-- CSS Files -->
+      <!-- CSS Files -->
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/responsive.css">
     <link rel="stylesheet" href="public/css/service-enhancements.css">
+    <link rel="stylesheet" href="public/css/hero-enhancements.css">
+    <link rel="stylesheet" href="public/css/mobile-premium.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,22 +53,39 @@
                         <li><a href="public/career.html">Career</a></li>
                     </ul>
                 </nav>
-                <div class="mobile-menu-toggle">
+                <div class="mobile-menu-toggle"> <!-- Back to right -->
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
             </div>
-        </div>    </header>    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('public/Hero_image_homepage.png');">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');">
         <div class="container">
             <div class="hero-content">
-                <h1>Grow Your Business With Industry Experts</h1>
-                <p>Altered is a Customer Service Representative Company which assist companies in managing their work in a process-oriented and cost-effective way.</p>
-                <a href="#Book_Demo" class="btn btn-primary">Book a Free Strategy Session</a>
-            </div>
-        </div>
-    </section>
+                <h1>Transform Your Business with Expert Support</h1>
+                <p>Altered delivers professional business support services that streamline operations, reduce costs by up to 70%, and help you focus on what matters most - growing your business.</p>
+                <div class="hero-buttons">
+                    <a href="#Book_Demo" class="btn btn-primary">Book a Free Strategy Session</a>
+                    <a href="public/services.html" class="btn btn-secondary">Explore Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">70%</span>
+                        <span class="stat-label">Cost Reduction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60%</span>
+                        <span class="stat-label">Time Saved</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -76,6 +94,10 @@
     <section id="about" class="section about">
         <div class="container">
             <div class="about-content">
+                <!-- Professional stock image for About section -->
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Our Team at Work" style="width:100%;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+                </div>
                 <div class="about-text">
                     <h6>Our Mission and Values</h6>
                     <h2>About Altered</h2>
@@ -91,7 +113,8 @@
         <div class="container">
             <div class="section-header">
                 <h6>Unlock a World of Expertise</h6>
-                <h2>Altered Streamlines your Business</h2>
+                <h2>Comprehensive Business Solutions</h2>
+                <p class="section-description">Discover how our services can transform your business operations and drive growth</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -99,32 +122,56 @@
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Customer Service</h3>
-                    <p>Dedicated representatives to handle customer inquiries and support.</p>
+                    <p>24/7 dedicated support team handling inquiries, complaints, and customer satisfaction with industry-leading response times.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 24/7 Customer Support</li>
+                        <li><i class="fas fa-check"></i> Multi-channel Communication</li>
+                        <li><i class="fas fa-check"></i> Customer Satisfaction Tracking</li>
+                    </ul>
+                    <a href="public/services.html#customer-service" class="btn btn-outline">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-box-open"></i>
                     </div>
                     <h3>Order Management</h3>
-                    <p>End-to-end management of your orders from receipt to delivery.</p>
+                    <p>End-to-end order processing with real-time tracking, inventory management, and seamless fulfillment solutions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Real-time Order Tracking</li>
+                        <li><i class="fas fa-check"></i> Inventory Management</li>
+                        <li><i class="fas fa-check"></i> Automated Fulfillment</li>
+                    </ul>
+                    <a href="public/services.html#order-management" class="btn btn-outline">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-laptop"></i>
+                        <i class="fas fa-laptop-house"></i>
                     </div>
                     <h3>Virtual Assistance</h3>
-                    <p>Professional support for administrative and operational tasks.</p>
+                    <p>Professional virtual assistants handling administrative tasks, scheduling, and day-to-day operations management.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Administrative Support</li>
+                        <li><i class="fas fa-check"></i> Calendar Management</li>
+                        <li><i class="fas fa-check"></i> Email Handling</li>
+                    </ul>
+                    <a href="public/services.html#virtual-assistance" class="btn btn-outline">Learn More</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Bookkeeping</h3>
-                    <p>Accurate financial record keeping and management services.</p>
+                    <p>Comprehensive financial management including accounting, reporting, and strategic financial planning.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Financial Reporting</li>
+                        <li><i class="fas fa-check"></i> Tax Preparation</li>
+                        <li><i class="fas fa-check"></i> Budget Planning</li>
+                    </ul>
+                    <a href="public/services.html#bookkeeping" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
             <div class="section-cta">
-                <a href="#Book_Demo" class="btn btn-primary">Schedule a Call</a>
+                <a href="#Book_Demo" class="btn btn-primary">Schedule a Consultation</a>
             </div>
         </div>
     </section>
@@ -133,77 +180,88 @@
     <section id="testimonials" class="section testimonials">
         <div class="container">
             <div class="section-header">
-                <h6>Client Reviews</h6>
-                <h2>What our clients are saying</h2>
-                <h4>5 Stars Based on 21+ Users Reviews</h4>
-                <div class="rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
+                <h6>Client Success Stories</h6>
+                <h2>What Our Clients Say</h2>
+                <div class="rating-summary">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="rating-text">4.9/5 Based on 50+ Client Reviews</p>
+                </div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"Altered has transformed our customer service operations. Their team's professionalism and efficiency have helped us achieve a 40% increase in customer satisfaction scores. The ROI has been exceptional."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sarah Johnson" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h5>Sarah Johnson</h5>
+                                <span>CEO, TechStart Inc.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"The virtual assistance team at Altered has become an integral part of our business. They handle our administrative tasks with precision and professionalism, allowing us to focus on strategic growth."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Michael Chen" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h5>Michael Chen</h5>
+                                <span>Founder, Growth Ventures</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"Their bookkeeping services have streamlined our financial operations significantly. The attention to detail and proactive approach to financial management has saved us countless hours and improved our bottom line."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" alt="Emily Rodriguez" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h5>Emily Rodriguez</h5>
+                                <span>CFO, Innovate Solutions</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="testimonial-controls">
-                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        <p>I want to tell you guys that I appreciate everything you do for us. Altered has impacted my business on a large scale and in a positive way. I am really happy that you are part of our team. They have played a big role in helping my business grow.</p>
-                    </div>                <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Tania Frey, CEO providing testimonial about Altered services" loading="lazy">
-                        </div>
-                        <div class="author-info">
-                            <h5>Tania Frey</h5>
-                            <span>CEO</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        <p>Altered has transformed how we handle customer inquiries. Their team is professional, responsive, and truly feels like an extension of our own business. I highly recommend their services to anyone looking to improve their customer support.</p>
-                    </div>                <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Scott Foresta, Founder sharing experience with Altered customer support services" loading="lazy">
-                        </div>
-                        <div class="author-info">
-                            <h5>Scott Foresta</h5>
-                            <span>Founder</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        <p>Since partnering with Altered, our operational efficiency has improved by 60%. Their virtual assistants are highly skilled and have become an integral part of our team. The level of service is consistently excellent.</p>
-                    </div>                <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Rivera, Operations Manager testimonial about Altered virtual assistance services" loading="lazy">
-                        </div>
-                        <div class="author-info">
-                            <h5>Jessica Rivera</h5>
-                            <span>Operations Manager</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-text">
-                        <p>The bookkeeping services from Altered have eliminated numerous headaches for our accounting department. Their attention to detail and accuracy have saved us both time and money. I'm impressed with their professionalism.</p>
-                    </div>                <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Chang, Financial Director sharing feedback about Altered bookkeeping services" loading="lazy">
-                        </div>
-                        <div class="author-info">
-                            <h5>Michael Chang</h5>
-                            <span>Financial Director</span>
-                        </div>
-                    </div>
-                </div>
+                <button class="testimonial-prev" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots"></div>
+                <button class="testimonial-next" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -277,24 +335,65 @@
     <section id="Book_Demo" class="section book-demo">
         <div class="container">
             <div class="section-header">
-                <h2>Book a Free Strategy Session to Discover How We Can Transform Your Business</h2>
+                <h6>Let's Transform Your Business</h6>
+                <h2>Schedule Your Free Strategy Session</h2>
+                <p class="section-description">Discover how our services can help you achieve your business goals</p>
             </div>
             <div class="booking-container">
-                <form id="booking-form" class="booking-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <div class="booking-content">
+                    <div class="booking-benefits">
+                        <h3>What You'll Get:</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check-circle"></i> Personalized Business Analysis</li>
+                            <li><i class="fas fa-check-circle"></i> Custom Solution Recommendations</li>
+                            <li><i class="fas fa-check-circle"></i> ROI Projections</li>
+                            <li><i class="fas fa-check-circle"></i> Implementation Strategy</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tell us about your business needs" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Schedule My Strategy Session</button>
-                </form>
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Primary Service Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="customer-service">Customer Service</option>
+                                <option value="order-management">Order Management</option>
+                                <option value="virtual-assistance">Virtual Assistance</option>
+                                <option value="bookkeeping">Bookkeeping</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Business Needs</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your business needs and challenges" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                I agree to receive marketing communications from Altered
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-calendar-check"></i>
+                            Schedule My Strategy Session
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -303,33 +402,52 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <div class="footer-social">
-                    <h5>Follow our social network</h5>
-                    <div class="social-icons">
-                        <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://youtube.com" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">ALTERED</a>
+                    <p class="footer-tagline">Transforming businesses through expert support services</p>
+                    <div class="footer-social">
+                        <h5>Connect With Us</h5>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-cta">
+                    <h4>Ready to Transform Your Business?</h4>
+                    <p>Schedule a free strategy session with our experts</p>
                     <a href="#Book_Demo" class="btn btn-light">Book a Free Strategy Session</a>
                 </div>
             </div>
             <div class="footer-main">
                 <div class="footer-info">
-                    <h5>Altered has the Best Customer Service Representatives to grow your Business.</h5>
                     <div class="contact-info">
+                        <h5>Get in Touch</h5>
                         <div class="contact-item">
-                            <a href="tel:+18009310215">
+                            <a href="tel:+18009310215" class="contact-link">
                                 <i class="fas fa-phone-alt"></i>
-                                <span>Call us</span>
+                                <span>+1 (800) 931-0215</span>
                             </a>
                         </div>
                         <div class="contact-item">
-                            <a href="mailto:info@altered.com">
+                            <a href="mailto:info@altered.com" class="contact-link">
                                 <i class="fas fa-envelope"></i>
-                                <span>Email us</span>
+                                <span>info@altered.com</span>
                             </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Business Ave, Suite 100<br>New York, NY 10001</span>
                         </div>
                     </div>
                 </div>
@@ -341,6 +459,7 @@
                             <li><a href="public/services.html">Services</a></li>
                             <li><a href="public/career.html">Careers</a></li>
                             <li><a href="public/contact.html">Contact Us</a></li>
+                            <li><a href="public/blog.html">Blog</a></li>
                         </ul>
                     </div>
                     <div class="footer-menu">
@@ -350,6 +469,7 @@
                             <li><a href="public/order-management.html">Order Management</a></li>
                             <li><a href="public/virtual-assistance.html">Virtual Assistance</a></li>
                             <li><a href="public/research-presentation.html">Research & Presentation</a></li>
+                            <li><a href="public/customer-service.html">Customer Service</a></li>
                         </ul>
                     </div>
                     <div class="footer-menu">
@@ -359,12 +479,20 @@
                             <li><a href="public/faq.html">FAQ</a></li>
                             <li><a href="public/privacy-policy.html">Privacy Policy</a></li>
                             <li><a href="public/terms-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="public/sitemap.html">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Altered. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Altered. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="public/privacy-policy.html">Privacy Policy</a>
+                        <a href="public/terms-conditions.html">Terms & Conditions</a>
+                        <a href="public/cookie-policy.html">Cookie Policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

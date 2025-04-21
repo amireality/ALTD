@@ -1396,22 +1396,24 @@ Improved visual styles for service pages
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .benefit-item {
-    background-color: rgba(21, 32, 46, 0.8); /* More opaque background */
+    background-color: #15202e; /* Solid background color instead of transparent */
     padding: 30px;
     border-radius: 10px;
     display: flex;
     align-items: flex-start;
-    border: 1px solid rgba(41, 68, 99, 0.5);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .benefit-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-color: #0d55a0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
 }
 
 .benefit-icon {
@@ -1431,15 +1433,22 @@ Improved visual styles for service pages
     color: #ff6900;
 }
 
+.benefit-content {
+    flex: 1;
+}
+
 .benefit-content h4 {
     color: #ffffff;
     margin-bottom: 10px;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .benefit-content p {
-    color: #e6eaee; /* Brightened text color */
+    color: var(--light-text);
     margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Media Queries */
@@ -1678,4 +1687,24 @@ input.error, textarea.error, select.error {
     font-size: 0.8rem;
     margin-top: 5px;
     margin-bottom: 10px;
+}
+
+/* Integration Image Styling */
+.integration-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.integration-image img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.integration-image img:hover {
+    transform: scale(1.02);
 }
